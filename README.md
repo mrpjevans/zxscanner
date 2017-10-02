@@ -1,7 +1,6 @@
-ZX Raspberry Keyboard Scanner
------------------------------
+# ZX Raspberry Keyboard Scanner
 
-# Introduction
+## Introduction
 
 Intended for a Raspberry Pi (any with the 40-pin GPIO) This python script uses the python-uinput and wiringpi libraries to interface a ZX Spectrum (original or +) keyboard membrane. Keypresses on the Spectrum keyboard are then injected into the kernel making it act like a regular keyboard. This can then be combined with RetroPie and/or FUSE to create a faithful emulation of the ZX Spectrum with nothing more than a Raspberry PI Zero W.
 
