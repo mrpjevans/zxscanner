@@ -73,8 +73,8 @@ Download the python-uinput package from <https://github.com/tuomasjjrasanen/pyth
 Again unzip in your home directory and change directory to its root.
 
 ````
-$ sudo python setuyp.py build
-$ sudo python setuyp.py install
+$ sudo python setup.py build
+$ sudo python setup.py install
 ````
 
 If you're not using RetroPie as your base OS, you need to load the uinput kernel module. Add the following to /etc/modules-load.d/modules.conf
@@ -117,7 +117,7 @@ Cut and paste the following:
 Now make that file an executable
 
 ````
-$ sudo chmod +x /usr/local/bin/zxscanner
+$ sudo chmod +x /usr/local/bin/startzxscanner
 ````
 
 Create this file:
