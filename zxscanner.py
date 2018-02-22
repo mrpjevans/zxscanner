@@ -1,5 +1,5 @@
 #
-# ZX Raspberry Keyboard Scanner v4
+# ZX Raspberry Keyboard Scanner v4.1
 # @mrpjevans mrpjevans.com 2017
 # MIT License (https://opensource.org/licenses/MIT) see LICENSE
 #
@@ -7,10 +7,10 @@
 import time, sys, wiringpi, uinput, os
 
 # KB1 (BCOM GPIO pins)
-dataLines = [17,27,22,18,23]
+dataLines = [26,19,13,6,5]
 
 # KB1 (BCOM GPIO pins)
-addressLines = [5,6,13,19,26,16,20,21]
+addressLines = [25,24,23,22,27,18,17,4]
 
 # The ZX Spectrum Keyboard Matrix (Mapped to modern keyboard )
 keys = [
