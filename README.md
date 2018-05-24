@@ -152,7 +152,7 @@ $ sudo systemctl daemon-reload
 Now your keyboard scanner should be working all the time.
 
 ## Usage
-When used with RetroPie and FUSE (note: not lr-fuse), a tap on the button will cleanly close down FUSE (although you'll have to configure it not to prompt for configuration). A 3-second press will switch the keyboard so keys 1-4 become F keys (so to get to FUSE's menu) and 5 6 7 8 act as cursor keys.
+When used with RetroPie and FUSE (note: not lr-fuse), a 3-second press on the button will cleanly close down FUSE (although you'll have to configure it not to prompt for configuration). A tap will switch the keyboard so keys 1-4 become F keys (so to get to FUSE's menu) and 5 6 7 8 act as cursor keys.
 
 ## Thanks
 To Tuomas Räsänen for his python-uninput modules and Jools and his amazing RetroPie project.

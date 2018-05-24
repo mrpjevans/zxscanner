@@ -6,11 +6,25 @@
 
 import time, sys, wiringpi, uinput, os
 
+#
+# MagPi Article Mappings
+#
+
 # KB1 (BCOM GPIO pins)
 dataLines = [26,19,13,6,5]
 
 # KB1 (BCOM GPIO pins)
 addressLines = [25,24,23,22,27,18,17,4]
+
+#
+# Original Mappings
+#
+
+# KB1 (BCOM GPIO pins)
+#dataLines = [17,27,22,18,23]
+
+# KB1 (BCOM GPIO pins)
+#addressLines = [5,6,13,19,26,16,20,21]
 
 # The ZX Spectrum Keyboard Matrix (Mapped to modern keyboard )
 keys = [
@@ -55,6 +69,9 @@ buttonTime = 0
 
 # 0 = Spectrum, 1 = Function Keys
 keyboardMode = 0
+
+# Local path
+myDir = os.path.dirname(os.path.realpath(__file__));
 
 # Well this is annoying
 device = uinput.Device([
@@ -106,17 +123,17 @@ try:
 			buttonTime = int(time.time()) - buttonPressed
 
 			# If over 3 secs, switch keyboard mode
-			if(buttonTime >= 3):
+			if(buttonTime < 3):
 
 				# Switch modes
 				if(keyboardMode == 0):
 					print("Switching to Function Keys")
 					keyboardMode = 1;
-					os.system('mpg123 -q ding2.mp3 &')
+					os.system('mpg123 -q ' + myDir +'/ding2.mp3 &')
 				else:
 					print("Switching to Spectrum Keys")
 					keyboardMode = 0;
-					os.system('mpg123 -q ding1.mp3 &')
+					os.system('mpg123 -q ' + myDir +'/ding1.mp3 &')
 
 			else:
 
@@ -161,6 +178,9 @@ try:
 
 			# Set high
 			wiringpi.digitalWrite(addressLines[addressLine], 1)
+
+			# Have a quick snooze (suggested by Keef)
+			time.sleep(.01)
 		
 
 except KeyboardInterrupt:
