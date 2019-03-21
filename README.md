@@ -12,6 +12,8 @@ Additionally a momentary push-to-make switch allows the switching of keyboard mo
 
 Using two small pieces of stripboard, solder in two molex connectors. For the larger KB2 each address line requires a diode to prevent short circuits with the black band away from the connector. See photos on <http://mrpjevans.com> for more details. Solder a ribbon cable from each connector to the GPIO as follows:
 
+**Original Project (blog)**
+
 (Broadcom GPIO Number) - (Connector / Line)
 
 17 - KB1 / 1<br/>
@@ -32,6 +34,25 @@ Using two small pieces of stripboard, solder in two molex connectors. For the la
 12 - Switch<br/>
 GND - Switch
 
+**MagPi Article (tidier wiring)**
+
+26 - KB1 / 1<br/>
+19 - KB1 / 2<br/>
+13 - KB1 / 3<br/>
+6 - KB1 / 4<br/>
+5 - KB1 / 5<br/>
+<br/>
+25 - KB2 / 1<br/>
+24 - KB2 / 2<br/>
+23 - KB2 / 3<br/>
+22 - KB2 / 4<br/>
+27 - KB2 / 5<br/>
+18 - KB2 / 6<br/>
+17 - KB2 / 7<br/>
+4 - KB2 / 8<br/>
+<br/>
+12 - Switch<br/>
+GND - Switch
 
 ## Software
 These instructions are intended to be used on a Raspberry Pi (40-pin GPIO) with [RetroPie](https://retropie.org.uk/) v4.3 installed.
